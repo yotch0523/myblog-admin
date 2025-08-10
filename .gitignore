@@ -1,0 +1,109 @@
+# ==== .NET / C# Solution Ignore Template (macOS) ====
+# 基本方針: 生成物/ユーザー環境依存ファイル/秘密情報を除外し、ソース/設定(共有価値のあるもの)は残す。
+
+### Build artifacts
+[Bb]in/
+[Oo]bj/
+out/
+artifacts/
+[Bb]uild/
+
+### Visual Studio / VS for Mac
+.vs/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+### JetBrains Rider
+.idea/
+*.sln.iml
+
+### VS Code (共有したいファイルは除外解除)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### Logs
+*.log
+logs/
+Log/
+log/
+
+### Coverage / Test results
+coverage/
+*.coverage
+*.coveragexml
+TestResult*/
+TestResults/
+*.trx
+
+### NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+### Global packages/ cache (ローカル)
+.nuget/packages/
+
+### Tool restore directory
+/.config/dotnet-tools.json
+
+### Entity Framework (Migrations は追跡するので除外しない)
+# 生成された SQL スクリプト等を除外したい場合は以下を必要に応じて追加:
+# Migrations/*.Designer.cs (=> 通常追跡推奨)
+
+### Secrets / Certificates
+*.pfx
+*.p12
+*.key
+*.snk
+secrets.json
+appsettings.*.local.json
+appsettings.Local.json
+appsettings.Development.local.json
+**/UserSecrets/
+
+### Environment files
+.env
+.env.*
+
+### Frontend (SPA/資産) / Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+### Bundled / Generated web assets
+wwwroot/dist/
+wwwroot/lib/
+
+### Cache / Temporary
+.cache/
+*.tmp
+*.temp
+
+### ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+### macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Others
+Thumbs.db
+*.swp
+*.swo
+*.orig
+
+# ==== End ====
