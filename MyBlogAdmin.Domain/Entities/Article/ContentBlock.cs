@@ -9,7 +9,7 @@ public class Block
     public DateTime UpdatedAt { get; set; }
 
     const int ContentLength = 100000;
-    
+
     public Guid? Block(string content)
     {
         if (content.Length > ContentLength)
@@ -29,4 +29,9 @@ public class Block
 
         return Id;
     }
+}
+
+private interface IBlockHtmlRenderer
+{ 
+    RenderResult Render(string markdown);
 }
